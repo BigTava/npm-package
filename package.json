@@ -1,9 +1,10 @@
 {
-  "name": "@bigtava/-package",
+  "name": "@bigtava/npm-package",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/types/index.d.ts",
   "scripts": {
-    "clear": "rm -rf ./lib",
+    "clean": "rm -rf ./lib",
     "build": "npm run clean && tsc -p ./tsconfig.json",
     "prepack": "npm run build",
     "test": "node --experimental-strip-types --test"
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/BigTava/npm-package#readme",
   "description": "",
   "devDependencies": {
-    "@types/node": "^22.13.14"
+    "@types/node": "^22.13.14",
+    "typescript": "^5.8.2"
   }
 }
