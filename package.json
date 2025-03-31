@@ -1,21 +1,25 @@
 {
   "name": "@bigtava/npm-package",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "main": "./lib/index.js",
   "types": "./lib/types/index.d.ts",
   "scripts": {
     "clean": "rm -rf ./lib",
     "build": "npm run clean && tsc -p ./tsconfig.json",
     "prepack": "npm run build",
-    "test": "node --experimental-strip-types --test"
+    "test": "node --experimental-strip-types --test",
+    "semantic-release": "semantic-release"
   },
   "files": [
     "lib/**/*"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BigTava/npm-package.git"
+    "url": "https://github.com/BigTava/npm-package.git"
   },
+  "release": {"branches": [
+    "main"
+  ]},
   "keywords": [],
   "author": "BigTava",
   "license": "ISC",
@@ -26,6 +30,10 @@
   "description": "",
   "devDependencies": {
     "@types/node": "^22.13.14",
+    "semantic-release": "^24.2.3",
     "typescript": "^5.8.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
