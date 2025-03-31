@@ -1,0 +1,29 @@
+{
+  "name": "@bigtava/-package",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "clear": "rm -rf ./lib",
+    "build": "npm run clean && tsc -p ./tsconfig.json",
+    "prepack": "npm run build",
+    "test": "node --experimental-strip-types --test"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigTava/npm-package.git"
+  },
+  "keywords": [],
+  "author": "BigTava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BigTava/npm-package/issues"
+  },
+  "homepage": "https://github.com/BigTava/npm-package#readme",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.13.14"
+  }
+}
